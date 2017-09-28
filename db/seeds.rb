@@ -15,8 +15,10 @@ require 'random_data'
      title:  RandomData.random_sentence,
      body:   RandomData.random_paragraph
    )
- end
- posts = Post.all
+end
+
+Post.find_or_create_by(title: "Hit Refresh", body: "A great book from the Microsoft CEO")
+posts = Post.all
  
  # Create Comments
  100.times do
