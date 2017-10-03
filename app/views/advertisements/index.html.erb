@@ -1,5 +1,5 @@
 <h1> Ad Index Page</h1>
-
+<%= link_to "New Ad", new_advertisement_path(@post), class: 'btn btn-success' %>
 <% @advertisements.each do |ads| %>
     <div class="media">
     <div class="media-body">
