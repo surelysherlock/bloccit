@@ -9,8 +9,9 @@ class SponsoredPostsController < ApplicationController
   end
 
   def create 
-    @sponsoredpost = SponsoredPost.new
+    puts "PARAMS ARE HERE BRAH"
     puts params
+    @sponsoredpost = SponsoredPost.new
     @sponsoredpost.title = params[:sponsored_post][:title]
     @sponsoredpost.body = params[:sponsored_post][:body]
     @sponsoredpost.price = params[:sponsored_post][:price]
