@@ -1,0 +1,10 @@
+<h2>Sign Up Confirmation </h2>
+
+<h1> Are the values correct? </h1>
+
+<%= @user.name %>
+<%= @user.email %>
+
+
+<%= button_to "Yes", {controller: "users", action: "create", params: params[:user]}, class: 'btn btn-success' %>
+<%= button_to "No", { :controller => "users", :action => "new"}, class: 'btn btn-default', :method => :get %>
