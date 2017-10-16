@@ -6,9 +6,8 @@ class Post < ApplicationRecord
 
     default_scope { order('created_at DESC') }
 
-    scope :order_by_title, -> { where(order('title DESC')) }
-
-    scope :order_by_reverse_created_at, -> { where(order('created_at ASC')) }
+    scope :order_by_title, -> { order('title DESC') }
+    scope :order_by_reverse_created_at, -> { order('created_at ASC') }
 
     validates :title, length: { minimum: 5 }, presence: true
     validates :body, length: { minimum: 20 }, presence: true
