@@ -44,6 +44,7 @@ users = User.all
  # Create Comments
  100.times do
    Comment.create!(
+     user: users.sample,
      post: posts.sample,
      body: RandomData.random_paragraph
    )
@@ -82,23 +83,4 @@ member = User.create!(
 
  puts "#{Advertisement.count} ads created"
 
- 5.times do
-  Question.create!(
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph,
-    resolved: false
-  )
- end
 
- puts "#{Question.count} questions created"
-
- 5.times do
-  SponsoredPost.create!(
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph,
-    price: 200
-  )
- end
-
- puts "#{SponsoredPost.count} Sponsored Posts created"
- 
