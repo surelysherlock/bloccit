@@ -38,9 +38,7 @@
       <%= render partial: 'favorites/favorite', locals: { post: @post } %>
     <% end %>
   </div>
-  <% if moderator_for_posts?(@post) %>
   <div class="col-md-4">
     <%= link_to "Edit", edit_topic_post_path(@post.topic, @post), class: 'btn btn-success' %>
   </div>
-<% end %> 
 </div>
