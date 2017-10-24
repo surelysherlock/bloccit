@@ -48,6 +48,8 @@ end
 
 gem 'pry-rails', :group => :development
 
+gem 'figaro', '1.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
