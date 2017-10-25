@@ -78,16 +78,6 @@ member = User.create!(
  puts "#{Comment.count} comments created"
  puts "#{Vote.count} votes created"
 
- #Create Ads
-
- 10.times do
-  Advertisement.create!(
-    title: RandomData.random_sentence,
-    copy: RandomData.random_paragraph,
-    price: 300
-  )
- end
-
- puts "#{Advertisement.count} ads created"
+ 
 
 
