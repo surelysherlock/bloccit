@@ -2,6 +2,7 @@
   <%= render partial: 'votes/voting', locals: { post: @post } %>
   <h1>
     <%= @post.title %> <br>
+    <h4><%= @post.body %> <br> <h4>
     <small>
       submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
     </small>
@@ -13,6 +14,9 @@
   <div>
   <h3>Comments</h3>
   <%= render @post.comments %>
+  <% if user_has_comments? %>
+   <h5> <%= current_user.name %> has not submitted any comments yet. </h5> 
+  <% end %>
 </div>
 <% if current_user %>
     <%= render 'comments/form', comment: Comment.new, post: @post %>
